@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENCIAS ESPACIALES</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card {
+            transition: transform 0.2s, box-shadow 0.10s;
+            perspective: 1000px; /* Añade perspectiva */
+            background-color: bisque;
+        }
+        .card:hover {
+            /*transform: translateY(-10px) rotateY(360deg) rotateX(0deg);  Efecto de elevación y rotación */
+            box-shadow: 0 20px 50px rgb(250, 246, 246); /* Sombra */
+            background-color: orange;
+        }
+        .card-img-top {
+            height: 200px; /* Altura fija para las imágenes */
+            object-fit: cover; /* Mantener la proporción */
+        }
+        .more-info {
+            display: none; /* Ocultar información adicional por defecto */
+        }
+    </style>
+    <script>
+        function toggleInfo(cardId) {
+            const info = document.getElementById(cardId);
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body id="tipos">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="principal.html">PRINCIPAL</a></li>
+                <li><a href="aplicaciones.html">HISTORIA</a></li>
+                <li><a href="tipos.html">TIPOS DE SATÉLITES</a>
+                    <ul>
+                        <li><a href="https://starwalk.space/es/news/spacex-starlink-satellites-night-sky-visibility-guide" target="_blank">Tren de Starlink</a></li>
+                        <li><a href="https://in-the-sky.org/satmap_radar.php?" target="_blank">Radar de Satélites</a></li>
+                        <li><a href="https://in-the-sky.org/satmap_globe.php?" target="_blank">Tipos de Satélites</a></li>
+                        <li><a href="https://satmap.space/" target="_blank">Tipos por Sincronía</a></li>
+                    </ul>
+                </li>
+                <li><a href="misiones.html">AGENCIAS ESPACIALES</a>
+                    <ul>
+                        <li><a href="https://www.nasa.gov/">Nasa</a></li>
+                        <li><a href="https://www.esa.int/">Agencia Espacial Europea</a></li>
+                        <li><a href="https://web.archive.org/web/20210411021412/http://www.roscosmos.ru/">Agencia Espacial Rusa</a></li>
+                        <li><a href="https://www.cmse.gov.cn/">Agencia Espacial China</a></li>
+                        <li><a href="https://global.jaxa.jp/">Agencia Espacial Japonesa</a></li>
+                        <li><a href="https://www.gob.mx/aem">Agencia Espacial Mexicana</a></li>
+                     </ul>
+                </li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+
+    <center>
+        <div class="container my-1">    
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/img/Nasa.png" class="card-img-top" alt="Imagen 1">
+                        <div class="card-body">
+                            <h5 class="card-title">NASA</h5>
+                            <button class="btn btn-secondary" onclick="toggleInfo('info-nasa')">Mostrar/Ocultar</button><br><br>                            
+                            <div id="info-nasa" class="more-info">
+                                <p>La NASA es responsable del programa espacial civil de los Estados Unidos y de la investigación aeronáutica.</p>
+                            </div>
+                            <a href="https://www.nasa.gov/" class="btn btn-primary" target="_blank">Leer más ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/img/esa.png" class="card-img-top" alt="Imagen 2">
+                        <div class="card-body">
+                            <h5 class="card-title">AGENCIA EUROPEA</h5>                            
+                            <button class="btn btn-secondary" onclick="toggleInfo('info-esa')">Mostrar/Ocultar</button><br><br>
+                            <div id="info-esa" class="more-info">
+                                <p>La ESA coordina las actividades espaciales de varios países europeos.</p>
+                            </div>
+                            <a href="https://www.esa.int/" class="btn btn-primary" target="_blank">Leer más ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/img/roscosmos.png" class="card-img-top" alt="Imagen 3">
+                        <div class="card-body">
+                            <h5 class="card-title">ROSCOSMOS</h5>   
+                            <button class="btn btn-secondary" onclick="toggleInfo('info-roscosmos')">Mostrar/Ocultar</button> <br><br>
+                            <div id="info-roscosmos" class="more-info">
+                                <p>Roscosmos es la agencia estatal Rusa responsable de la exploración espacial.</p>
+                            </div>
+                            <a href="https://web.archive.org/web/20210411021412/http://www.roscosmos.ru/" class="btn btn-primary" target="_blank">Leer más ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <br>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/img/china.png" class="card-img-top" alt="Imagen 4">
+                        <div class="card-body">
+                            <h5 class="card-title">CMSA</h5>                           
+                            <button class="btn btn-secondary" onclick="toggleInfo('info-cmsa')">Mostrar/Ocultar</button> <br><br>
+                            <div id="info-cmsa" class="more-info">
+                                <p>La CMSA gestiona el programa espacial tripulado de China.</p>
+                            </div>
+                            <a href="https://www.cmse.gov.cn/" class="btn btn-primary" target="_blank">Leer más ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/img/japon.png" class="card-img-top" alt="Imagen 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Agencia Japonesa</h5>                          
+                            <button class="btn btn-secondary" onclick="toggleInfo('info-jaxa')">Mostrar/Ocultar</button><br><br>
+                            <div id="info-jaxa" class="more-info">
+                                <p>JAXA es la agencia espacial nacional de Japón.</p>
+                            </div>
+                            <a href="https://global.jaxa.jp/" class="btn btn-primary" target="_blank">Leer más ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/img/mexico.png" class="card-img-top" alt="Imagen 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Agencia Mexicana</h5>                          
+                            <button class="btn btn-secondary" onclick="toggleInfo('info-aem')">Mostrar/Ocultar</button><br><br>
+                            <div id="info-aem" class="more-info">
+                                <p>AEM coordina la política espacial de México.</p>
+                            </div>
+                            <a href="https://www.gob.mx/aem" class="btn btn-primary" target="_blank">Leer más ...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

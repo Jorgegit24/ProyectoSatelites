@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script> <!-- Asegúrate de que el script se carga correctamente -->
+</head>
+
+<body id="contacto">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="principal.html">PRINCIPAL</a></li>
+                <li><a href="aplicaciones.html">HISTORIA</a></li>
+                <li><a href="tipos.html">TIPOS DE SATÉLITES</a>
+                    <ul>
+                        <li><a href="https://starwalk.space/es/news/spacex-starlink-satellites-night-sky-visibility-guide" target="_blank">Tren de Starlink</a></li>
+                        <li><a href="https://in-the-sky.org/satmap_radar.php?" target="_blank">Radar de Satélites</a></li>
+                        <li><a href="https://in-the-sky.org/satmap_globe.php?" target="_blank">Tipos de Satélites</a></li>
+                        <li><a href="https://es.wikipedia.org/wiki/Sat%C3%A9lite_artificial" target="_blank">Cantidad Satélites en Orbita</a></li>
+                        <li><a href="https://trabajocienciasdel.wixsite.com/misitio/single-post/2017/11/10/partes-de-un-sat%C3%A9lite" target="_blank">Partes de un Satélite</a></li>
+                        <li><a href="https://larepublica.pe/ciencia/2024/07/02/spacex-lanzara-20-satelites-starlink-en-la-madrugada-del-3-de-julio-conoce-a-que-hora-y-como-ver-el-evento-elon-musk-106630" target="_blank">Transporte Satélites Starlink</a></li>
+                    </ul>
+                </li>
+                <li><a href="misiones.html">AGENCIAS ESPACIALES</a>
+                    <ul>
+                        <li><a href="https://www.nasa.gov/">Nasa</a></li>
+                        <li><a href="https://www.esa.int/">Agencia Espacial Europea</a></li>
+                        <li><a href="https://web.archive.org/web/20210411021412/http://www.roscosmos.ru/">Agencia Espacial Rusa</a></li>
+                        <li><a href="https://www.cmse.gov.cn/">Agencia Espacial China</a></li>
+                        <li><a href="https://global.jaxa.jp/">Agencia Espacial Japonesa</a></li>
+                        <li><a href="https://www.gob.mx/aem">Agencia Espacial Mexicana</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br><br><br>
+        <section id="video">
+            <video id="miVideo" muted autoplay loop>
+                <source src="video/caminando.mp4" type="video/mp4">
+            </video>
+            <button id="playPause">Play/Pausa</button>
+        </section>
+        <center>
+            <div class="conta">
+                <h1>Formulario de Contacto</h1>
+                <form id="contactForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+    
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" required>
+    
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" required>
+    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+    
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" required>
+                        <option value="">Seleccione...</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+    
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" required>
+    
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" rows="4"></textarea><br>
+    
+                    <button type="submit">Enviar Datos</button>
+                </form><br>
+    
+                <div id="resultado" class="resultado"></div>
+                <button id="nuevoContacto" type="button">Nuevo Contacto</button>
+            </div>
+        </center>
+    </main>
+</body>
+</html>

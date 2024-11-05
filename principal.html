@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satélites - Inicio</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        #contador {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body id="principal">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="principal.html">PRINCIPAL</a></li>
+                <li><a href="aplicaciones.html">HISTORIA</a></li>
+                <li><a href="tipos.html">TIPOS DE SATÉLITES</a>
+                    <ul>
+                        <li><a href="https://starwalk.space/es/news/spacex-starlink-satellites-night-sky-visibility-guide" target="_blank">Tren de Starlink</a></li>
+                        <li><a href="https://in-the-sky.org/satmap_radar.php?" target="_blank">Radar de Satélites</a></li>
+                        <li><a href="https://in-the-sky.org/satmap_globe.php?" target="_blank">Tipos de Satélites</a></li>
+                        <li><a href="https://es.wikipedia.org/wiki/Sat%C3%A9lite_artificial" target="_blank">Cantidad Satélites en Orbita</a></li>
+                        <li><a href="https://trabajocienciasdel.wixsite.com/misitio/single-post/2017/11/10/partes-de-un-sat%C3%A9lite" target="_blank">Partes de un Satélite</a></li>
+                        <li><a href="https://larepublica.pe/ciencia/2024/07/02/spacex-lanzara-20-satelites-starlink-en-la-madrugada-del-3-de-julio-conoce-a-que-hora-y-como-ver-el-evento-elon-musk-106630" target="_blank">Transporte Satélites Starlink</a></li>
+                    </ul>
+                </li>
+                <li><a href="misiones.html">AGENCIAS ESPACIALES</a>
+                    <ul>
+                        <li><a href="https://www.nasa.gov/">Nasa</a></li>
+                        <li><a href="https://www.esa.int/">Agencia Espacial Europea</a></li>
+                        <li><a href="https://web.archive.org/web/20210411021412/http://www.roscosmos.ru/">Agencia Espacial Rusa</a></li>
+                        <li><a href="https://www.cmse.gov.cn/">Agencia Espacial China</a></li>
+                        <li><a href="https://global.jaxa.jp/">Agencia Espacial Japonesa</a></li>
+                        <li><a href="https://www.gob.mx/aem">Agencia Espacial Mexicana</a></li>
+                     </ul>
+                </li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+     <br><br><br>
+        <section id="video">
+            <video id="miVideo" muted autoplay loop>
+                <source src="video/estacion.mp4" type="video/mp4">
+            </video>
+             <button id="playPause">Play/Pausa</button>    
+        </section>
+    </main>
+<br><br> 
+</body>
+
+<script src="/js/script.js"></script>
+<footer>
+    <div>
+      <h3>Descubre el Fascinante Mundo de los Satélites y <br>
+         Cómo han Transformado la Comunicación, Navegación y Observación de la Tierra.</h3>
+    </div>
+</footer>
+
+<!-- Contador de visitas -->
+<div id="contador">Visitas: <span id="numeroVisitas">0</span></div>
+
+<script>
+    // Inicializar contador de visitas
+    let visitas = localStorage.getItem('visitas') ? parseInt(localStorage.getItem('visitas')) : 0;
+    visitas++;
+    localStorage.setItem('visitas', visitas);
+    document.getElementById('numeroVisitas').textContent = visitas;
+</script>
+</html>
